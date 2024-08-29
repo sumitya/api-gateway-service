@@ -1,0 +1,104 @@
+{
+	"info": {
+		"_postman_id": "d783b18b-196d-4d9f-90c4-539705b407ad",
+		"name": "api-gateway-service",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "518050",
+		"_collection_link": "https://winter-capsule-761069.postman.co/workspace/Team-Workspace~e17a94c4-1c7e-4e7c-8d3d-757801791b26/collection/518050-d783b18b-196d-4d9f-90c4-539705b407ad?action=share&source=collection_link&creator=518050"
+	},
+	"item": [
+		{
+			"name": "CreateCompany",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": \"ABC\",\n  \"desc\":\"bla bla company\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8090/companies",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"companies"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreateJob",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"Software Engineer\",\n    \"desc\": \"s/w engineer\",\n    \"minSalary\": 60000,\n    \"maxSalary\": 120000,\n    \"location\": \"CAN\",\n    \"companyId\": 1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8090/jobs/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"jobs",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetJob",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8090/jobs/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"jobs",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetCompany",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8090/companies/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"companies",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
